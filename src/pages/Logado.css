@@ -1,0 +1,140 @@
+.logado-pagina {
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.logado-painel {
+    width: 100%;
+    max-width: 1150px;
+}
+
+.logado-cabecalho {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.logado-titulo {
+    color: white;
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.logado-subtitulo {
+    color: #cbd5e1;
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+.logado-botao-sair {
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.logado-botao-sair:hover {
+    background-color: #dc2626;
+}
+
+.logado-grade {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.logado-card {
+    background-color: white;
+    border-radius: 18px;
+    padding: 28px;
+    min-height: 270px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    transition: 0.3s;
+}
+
+.logado-card:hover {
+    transform: translateY(-6px);
+}
+
+.logado-card-icone {
+    font-size: 42px;
+    line-height: 1;
+}
+
+.logado-card-titulo {
+    color: #0f172a;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.logado-card-texto {
+    color: #475569;
+    font-size: 15px;
+    line-height: 1.5;
+    max-width: 240px;
+    min-height: 70px;
+    margin: 0;
+}
+
+.logado-card-botao {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background-color: #2563eb;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.logado-card-botao:hover {
+    background-color: #1d4ed8;
+}
+
+@media (max-width: 900px) {
+    .logado-grade {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .logado-pagina {
+        padding: 20px;
+    }
+
+    .logado-cabecalho {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .logado-titulo {
+        font-size: 28px;
+    }
+
+    .logado-grade {
+        grid-template-columns: 1fr;
+    }
+}

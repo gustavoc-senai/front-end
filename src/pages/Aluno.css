@@ -1,0 +1,249 @@
+.alunos-pagina {
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    padding: 40px;
+}
+
+.alunos-container {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.alunos-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.alunos-topo h1 {
+    color: white;
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.alunos-topo p {
+    color: #cbd5e1;
+    margin-top: 8px;
+    font-size: 16px;
+}
+
+.alunos-topo-botoes {
+    display: flex;
+    gap: 12px;
+}
+
+.alunos-botao-voltar,
+.alunos-botao-novo {
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.alunos-botao-voltar {
+    background-color: #64748b;
+}
+
+.alunos-botao-voltar:hover {
+    background-color: #475569;
+}
+
+.alunos-botao-novo {
+    background-color: #2563eb;
+}
+
+.alunos-botao-novo:hover {
+    background-color: #1d4ed8;
+}
+
+.alunos-form-card,
+.alunos-lista-card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.alunos-form-centralizado {
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.alunos-form-card h2,
+.alunos-lista-card h2 {
+    color: #0f172a;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.alunos-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.alunos-formulario input,
+.alunos-formulario select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+    color: #0f172a;
+    background-color: white;
+}
+
+.alunos-formulario input:focus,
+.alunos-formulario select:focus {
+    border-color: #2563eb;
+}
+
+.alunos-botao-salvar {
+    padding: 13px;
+    border: none;
+    border-radius: 10px;
+    background-color: #2563eb;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.alunos-botao-salvar:hover {
+    background-color: #1d4ed8;
+}
+
+.alunos-botao-cancelar {
+    padding: 13px;
+    border: 1px solid #64748b;
+    border-radius: 10px;
+    background-color: white;
+    color: #475569;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.alunos-botao-cancelar:hover {
+    background-color: #f1f5f9;
+}
+
+.alunos-lista-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.alunos-lista-topo p {
+    color: #64748b;
+    font-size: 15px;
+}
+
+.alunos-tabela-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.alunos-tabela {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.alunos-tabela thead {
+    background-color: #f1f5f9;
+}
+
+.alunos-tabela th {
+    color: #334155;
+    text-align: left;
+    padding: 14px;
+    font-size: 14px;
+}
+
+.alunos-tabela td {
+    color: #475569;
+    padding: 14px;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 14px;
+}
+
+.alunos-tabela tr:hover {
+    background-color: #f8fafc;
+}
+
+.alunos-status {
+    background-color: #dcfce7;
+    color: #166534;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.alunos-acoes {
+    display: flex;
+    gap: 8px;
+}
+
+.alunos-botao-editar {
+    background-color: #f59e0b;
+    color: white;
+    border: none;
+    padding: 8px 11px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.alunos-botao-editar:hover {
+    background-color: #d97706;
+}
+
+.alunos-botao-excluir {
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    padding: 8px 11px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.alunos-botao-excluir:hover {
+    background-color: #dc2626;
+}
+
+@media (max-width: 700px) {
+    .alunos-pagina {
+        padding: 20px;
+    }
+
+    .alunos-topo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .alunos-topo h1 {
+        font-size: 28px;
+    }
+
+    .alunos-topo-botoes {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .alunos-botao-voltar,
+    .alunos-botao-novo {
+        width: 100%;
+    }
+}
