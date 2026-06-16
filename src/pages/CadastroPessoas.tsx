@@ -116,8 +116,7 @@ function CadastroPessoas() {
                         <input type="number" placeholder="Idade" value={idade} onChange={(e) => setIdade(e.target.value)} />
                         <input type="text" placeholder="CPF" value={cpf} onChange={(e) => setCpf(e.target.value)} />
                         <input type="text" placeholder="Telefone" value={telefone} onChange={(e) => setTelefone(e.target.value)} />
-                        <input type="email" placeholder="Email (Será o Login)" value={email} onChange={(e) => setEmail(e.target.value)} />
-                        <input type="password" placeholder="Senha de Acesso" value={senha} onChange={(e) => setSenha(e.target.value)} />
+                        <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
                         <input type="text" placeholder="Turma do Aluno" value={turma} onChange={(e) => setTurma(e.target.value)} />
 
                         <select value={status} onChange={(e) => setStatus(e.target.value)}>
