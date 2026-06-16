@@ -4,11 +4,23 @@ import { useNavigate } from 'react-router-dom'
 
 import './Aluno.css'
 
+// 1. Criada a interface para mapear os dados exatamente como vêm do Java
+interface Aluno {
+    id: number;
+    nome: string;
+    idade: number;
+    email: string;
+    telefone: string;
+    turma: string;
+    status: string;
+}
+
 function ConsultaAlunos() {
 
     const navigate = useNavigate()
 
-    const [alunos, setAlunos] = useState<any[]>([])
+    // 2. Estado tipado corretamente com a nossa interface para o TypeScript não reclamar
+    const [alunos, setAlunos] = useState<Aluno[]>([])
 
     useEffect(() => {
         buscarAlunos()
@@ -16,7 +28,7 @@ function ConsultaAlunos() {
 
     async function buscarAlunos() {
         try {
-            const response = await axios.get(
+            const response = await axios.get<Aluno[]>(
                 'http://localhost:8080/alunos'
             )
             setAlunos(response.data)
@@ -97,18 +109,18 @@ function ConsultaAlunos() {
                             <tbody>
                                 {
                                     alunos.map((aluno) => {
-                                        // Extrai a referência de pessoa para evitar repetição e erros de undefined
-                                        const pessoa = aluno.pessoa || {};
+                                        // 3. Removida a lógica antiga de "const pessoa = ...". 
+                                        // Agora lemos as propriedades direto do 'aluno', combinando com seu Spring Boot.
                                         return (
                                             <tr key={aluno.id}>
-                                                <td>{pessoa.nome || 'Não informado'}</td>
-                                                <td>{pessoa.idade || '-'}</td>
-                                                <td>{pessoa.email || '-'}</td>
-                                                <td>{pessoa.telefone || '-'}</td>
-                                                <td>{aluno.turma}</td>
+                                                <td>{aluno.nome || ''}</td>
+                                                <td>{aluno.idade || '-'}</td>
+                                                <td>{aluno.email || '-'}</td>
+                                                <td>{aluno.telefone || '-'}</td>
+                                                <td>{aluno.turma || '-'}</td>
                                                 <td>
                                                     <span className="alunos-status">
-                                                        {pessoa.status || 'Ativo'}
+                                                        {aluno.status || 'Ativo'}
                                                     </span>
                                                 </td>
                                                 <td>
