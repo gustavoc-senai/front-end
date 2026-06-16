@@ -56,7 +56,7 @@ function CadastroPessoas() {
     }
 
     async function salvarPessoa() {
-        const pessoaPayloadCompleto = {
+        const pessoaCompleto = {
             nome,
             cpf,
             id: id ? Number(id) : undefined,
@@ -77,15 +77,15 @@ function CadastroPessoas() {
             if (id) {
                 await axios.put(
                     `http://localhost:8080/pessoas/${id}`,
-                    pessoaPayloadCompleto
+                    pessoaCompleto
                 )
-                alert('Pessoa e relacionamentos atualizados!')
+                alert('Pessoa atualizada!')
             } else {
                 await axios.post(
                     'http://localhost:8080/pessoas',
-                    pessoaPayloadCompleto
+                    pessoaCompleto
                 )
-                alert('Pessoa cadastrada com sucesso com mapeamento completo!')
+                alert('Pessoa cadastrada!')
             }
 
             navigate('/pessoas/consulta')
